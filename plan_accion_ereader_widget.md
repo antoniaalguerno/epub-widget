@@ -10,7 +10,6 @@
 **Objetivo:** tener el entorno listo y entender lo mínimo necesario de las herramientas nuevas antes de escribir lógica de producto.
 
 **Tareas:**
-
 - Instalar Rust, Node, Tauri CLI y prerequisitos de Windows (WebView2 ya viene en Win10/11).
 - Crear proyecto Tauri + Svelte 5 desde el scaffold oficial (`create-tauri-app`).
 - Hacer correr el "hello world" como ventana normal (sin trucos de widget todavía).
@@ -26,14 +25,13 @@
 **Objetivo:** resolver todo lo que hace que esto se sienta un widget y no una app normal, sin meter todavía el epub.
 
 **Tareas:**
-
-- [ ] Ventana sin bordes (`decorations: false`)
-- [ ] Always-on-top.
-- [ ] Fondo transparente.
-- [ ] Arrastrable desde cualquier punto del contenido (no solo una barra de título).
-- [ ] Persistencia de posición y tamaño entre sesiones (guardar en un JSON local).
-- [ ] Comportamiento correcto en multi-monitor (que no aparezca fuera de pantalla si cambiaste de setup).
-- [ ] Un ícono en la bandeja del sistema (tray) para mostrar/ocultar el widget y salir de la app.
+- Ventana sin bordes (`decorations: false`).
+- Always-on-top.
+- Fondo transparente.
+- Arrastrable desde cualquier punto del contenido (no solo una barra de título).
+- Persistencia de posición y tamaño entre sesiones (guardar en un JSON local).
+- Comportamiento correcto en multi-monitor (que no aparezca fuera de pantalla si cambiaste de setup).
+- Un ícono en la bandeja del sistema (tray) para mostrar/ocultar el widget y salir de la app.
 
 **Cierre de fase:** un rectángulo flotante vacío (puede tener un color de fondo de prueba) que se puede mover a cualquier parte de la pantalla, queda siempre encima, y recuerda dónde lo dejaste al reabrir la app.
 
@@ -44,7 +42,6 @@
 **Objetivo:** poder cargar un .epub de forma segura y extraer lo esencial, sin preocuparte todavía de cómo se ve.
 
 **Tareas:**
-
 - Función en Rust (o plugin) para recibir la ruta de un .epub y descomprimirlo.
 - Validación de rutas al descomprimir (evitar zip slip) y límite de tamaño (evitar zip bombs).
 - Extraer metadata básica: título, autor, portada.
@@ -60,7 +57,6 @@
 **Objetivo:** que el contenido del epub se pueda leer de verdad dentro del widget.
 
 **Tareas:**
-
 - Integrar epub.js en el frontend Svelte.
 - Cargar el epub descomprimido en el visor.
 - Paginación (avanzar/retroceder), no scroll infinito.
@@ -76,7 +72,6 @@
 **Objetivo:** que la experiencia persista entre sesiones y se pueda manejar más de un libro.
 
 **Tareas:**
-
 - Guardar progreso de lectura por libro (última página/posición).
 - Vista simple de librería (lista de libros agregados, con portada).
 - Agregar/quitar libros (drag & drop de un .epub al widget, o selector de archivo).
@@ -91,7 +86,6 @@
 **Objetivo:** revisar con cabeza fría todo lo que quedó "suelto" en fases anteriores, antes de pensar en publicar.
 
 **Tareas:**
-
 - Auditar las capabilities: confirmar que cada ventana tiene el mínimo de permisos posible (nada de `fs:default` genérico si no lo necesitás).
 - Revisar que la extracción de zip no tenga huecos.
 - Si vas a tener auto-actualización, definir el mecanismo (firmado, verificación de firma antes de instalar).
@@ -106,7 +100,6 @@
 **Objetivo:** que otra persona lo pueda instalar sin fricción.
 
 **Tareas:**
-
 - Generar el instalador con `tauri build` (MSI/NSIS).
 - Ícono de la app, nombre, metadata.
 - Firma de código (para evitar warnings de SmartScreen) — evaluar costo/beneficio en esta etapa.
@@ -122,7 +115,6 @@
 **Objetivo:** ahora que el ereader funciona de punta a punta, extraer el patrón para que agregar un widget nuevo sea barato.
 
 **Tareas:**
-
 - Separar conceptualmente "core/shell" (gestión de ventanas, tray, persistencia general) del "widget epub" (que pasa a ser el primer módulo).
 - Definir una interfaz mínima de "qué necesita un widget" (su propia ventana, su propia capability, su propio estado).
 - Documentar el patrón para vos misma (aunque sea informal) para no tener que redescubrirlo con el próximo widget.
@@ -136,7 +128,6 @@
 **Objetivo:** validar que la arquitectura de la Fase 7 realmente sirve, con algo simple.
 
 **Tareas:**
-
 - Elegir un widget chico (algo simple: notas rápidas, clima, lo que prefieras) como prueba de concepto.
 - Implementarlo usando el patrón definido en la Fase 7.
 - Medir cuánto código nuevo hizo falta vs. cuánto se reusó del core.
