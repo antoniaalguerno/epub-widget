@@ -12,11 +12,25 @@
   "app": {
     "windows": [
       {
+        "label": "main",
         "title": "epub-widget",
-        "width": 800,
-        "height": 600
+        "width": 320,
+        "height": 480,
+        "minWidth": 240,
+        "minHeight": 320,
+        "resizable": true,
+        "decorations": false,
+        "transparent": true,
+        "alwaysOnTop": true,
+        "shadow": false,
+        "skipTaskbar": true,
+        "center": true,
+        "dragDropEnabled": false
       }
     ],
+    "trayIcon": {
+      "iconPath": "icons/icon.png"
+    },
     "security": {
       "csp": null
     }
