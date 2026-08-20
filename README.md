@@ -18,3 +18,21 @@ npm run tauri dev
 ## Recommended IDE Setup
 
 [VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer).
+
+- [ ]
+
+PS C:\epub-widget> npm run tauri dev
+
+> epub-widget@0.1.0 tauri
+> tauri dev
+
+failed to run 'cargo metadata' command to get workspace directory: failed to run command cargo metadata --no-deps --format-version 1: program not found
+Error failed to run 'cargo metadata' command to get workspace directory: failed to run command cargo metadata --no-deps --format-version 1: program not found
+PS C:\epub-widget> npm run tauri dev
+
+> epub-widget@0.1.0 tauri
+> tauri dev
+
+failed to run 'cargo metadata' command to get workspace directory: failed to run command cargo metadata --no-deps --format-version 1: program not found
+Error failed to run 'cargo metadata' command to get workspace directory: failedto run command cargo metadata --no-deps --format-version 1: program not found
+PS C:\epub-widget>
